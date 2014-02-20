@@ -9,7 +9,7 @@ http://www.network-science.de/ascii/
 When using this product. Please remember to give credit to oni49, 
 the author of this product. 
 
-Reachable at @oni_49. Feedback welcome.
+Reachable at Twitter @oni_49 and GitHub @oni49. Feedback welcome.
 """
 
 from PIL import Image
