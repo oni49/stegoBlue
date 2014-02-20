@@ -4,7 +4,6 @@
  /        \|  | \  ___// /_/  >  <_> )    |   \  |_|  |  /\  ___/ 
 /_______  /|__|  \___  >___  / \____/|______  /____/____/  \___  >
         \/           \/_____/               \/                 \/
-====================================================================
 Text hiding in the Least Significant Bit of Blue Pixels of images.
 
 In the current version, JPEG compression corrupts the embeded message.
