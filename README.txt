@@ -16,4 +16,4 @@ The UI, while crude, is straight forward.
 
 This project is dependent on the Python Image Library. 
 
-Feedback can be sent to @oni_49
+Feedback can be sent to Twitter @oni_49 or GitHub @oni49
