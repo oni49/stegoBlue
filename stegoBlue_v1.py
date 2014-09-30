@@ -15,126 +15,26 @@ Reachable at Twitter @oni_49 and GitHub @oni49. Feedback welcome.
 from PIL import Image
 import math, binascii
 
+alphabet = 'abcdefghijklmnopqrstuvwxyz_'
 def getNumber(c, k):
 	"""Function to turn a letter into a number and shift it
 	will use 27 letters such that we can encode special characters
 	as a _ """
-	if c=="a":
-		x = 0
-	elif c=="b":
-		x = 1
-	elif c=="c":
-		x = 2
-	elif c=="d":
-		x = 3
-	elif c=="e":
-		x = 4
-	elif c=="f":
-		x = 5
-	elif c=="g":
-		x = 6
-	elif c=="h":
-		x = 7
-	elif c=="i":
-		x = 8
-	elif c=="j":
-		x = 9
-	elif c=="k":
-		x = 10
-	elif c=="l":
-		x = 11
-	elif c=="m":
-		x = 12
-	elif c=="n":
-		x = 13
-	elif c=="o":
-		x = 14
-	elif c=="p":
-		x = 15
-	elif c=="q":
-		x = 16
-	elif c=="r":
-		x = 17
-	elif c=="s":
-		x = 18
-	elif c=="t":
-		x = 19
-	elif c=="u":
-		x = 20
-	elif c=="v":
-		x = 21
-	elif c=="w":
-		x = 22
-	elif c=="x":
-		x = 23
-	elif c=="y":
-		x = 24
-	elif c=="z":
-		x = 25
-	else:
-		x = 26
-
-	x = math.fmod(x + k, 27)
+	try:
+		i = alphabet.index(c)
+	except Exception, e:
+		i = 26
+	x = math.fmod(i + k, 27)
 	return int(x)
 
 def getLetter(c, k):
 	"""Take a number and turn it into a character"""
 	key = 27 - int(math.fmod(k, 27))
 	x = int(math.fmod(c+key, 27))
-	if x==0:
-		a = "a"
-	elif x==1:
-		a = "b"
-	elif x==2:
-		a = "c"
-	elif x==3:
-		a = "d"
-	elif x==4:
-		a = "e"
-	elif x==5:
-		a = "f"
-	elif x==6:
-		a = "g"
-	elif x==7:
-		a = "h"
-	elif x==8:
-		a = "i"
-	elif x==9:
-		a = "j"
-	elif x==10:
-		a = "k"
-	elif x==11:
-		a = "l"
-	elif x==12:
-		a = "m"
-	elif x==13:
-		a = "n"
-	elif x==14:
-		a = "o"
-	elif x==15:
-		a = "p"
-	elif x==16:
-		a = "q"
-	elif x==17:
-		a = "r"
-	elif x==18:
-		a = "s"
-	elif x==19:
-		a = "t"
-	elif x==20:
-		a = "u"
-	elif x==21:
-		a = "v"
-	elif x==22:
-		a = "w"
-	elif x==23:
-		a = "x"
-	elif x==24:
-		a = "y"
-	elif x==25:
-		a = "z"
-	else:
-		a = "_"
+	try:
+		a = alphabet[x]
+	except Exception, e:
+		a = '?'
 
 	return a
 
